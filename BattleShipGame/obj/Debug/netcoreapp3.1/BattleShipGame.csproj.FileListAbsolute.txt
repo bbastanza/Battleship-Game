@@ -1,0 +1,13 @@
+/home/stanzu10/Development/git/BattleShipGame/BattleShipGame/bin/Debug/netcoreapp3.1/BattleShipGame
+/home/stanzu10/Development/git/BattleShipGame/BattleShipGame/bin/Debug/netcoreapp3.1/BattleShipGame.deps.json
+/home/stanzu10/Development/git/BattleShipGame/BattleShipGame/bin/Debug/netcoreapp3.1/BattleShipGame.runtimeconfig.json
+/home/stanzu10/Development/git/BattleShipGame/BattleShipGame/bin/Debug/netcoreapp3.1/BattleShipGame.runtimeconfig.dev.json
+/home/stanzu10/Development/git/BattleShipGame/BattleShipGame/bin/Debug/netcoreapp3.1/BattleShipGame.dll
+/home/stanzu10/Development/git/BattleShipGame/BattleShipGame/bin/Debug/netcoreapp3.1/BattleShipGame.pdb
+/home/stanzu10/Development/git/BattleShipGame/BattleShipGame/obj/Debug/netcoreapp3.1/BattleShipGame.csprojAssemblyReference.cache
+/home/stanzu10/Development/git/BattleShipGame/BattleShipGame/obj/Debug/netcoreapp3.1/BattleShipGame.AssemblyInfoInputs.cache
+/home/stanzu10/Development/git/BattleShipGame/BattleShipGame/obj/Debug/netcoreapp3.1/BattleShipGame.AssemblyInfo.cs
+/home/stanzu10/Development/git/BattleShipGame/BattleShipGame/obj/Debug/netcoreapp3.1/BattleShipGame.csproj.CoreCompileInputs.cache
+/home/stanzu10/Development/git/BattleShipGame/BattleShipGame/obj/Debug/netcoreapp3.1/BattleShipGame.dll
+/home/stanzu10/Development/git/BattleShipGame/BattleShipGame/obj/Debug/netcoreapp3.1/BattleShipGame.pdb
+/home/stanzu10/Development/git/BattleShipGame/BattleShipGame/obj/Debug/netcoreapp3.1/BattleShipGame.genruntimeconfig.cache
