@@ -6,8 +6,9 @@ namespace BattleShipGame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Battleship!");
+            Console.WriteLine("\n\t\tWelcome to Battleship!\n");
             Console.WriteLine("What is your name?");
+            
             var player = new Player();
             var grid = new Grid();
             var difficulty = new Difficult();
@@ -17,6 +18,12 @@ namespace BattleShipGame
             
             grid.LogGrid();
             difficulty.ChooseDifficulty();
+            player.GuessesLeft = difficulty.Chances;
+
+
+
+
+
         }
     }
 }

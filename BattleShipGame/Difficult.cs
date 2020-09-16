@@ -5,13 +5,20 @@ namespace BattleShipGame
     public class Difficult
     {
         public string Difficulty;
-        public int Chances;
+        public byte Chances;
         
         public void ChooseDifficulty()
         {
             Console.WriteLine("1=HARD 2=MEDIUM 3=EASY");
             Console.WriteLine("Please Choose a Difficulty: ");
             Difficulty = Console.ReadLine();
+            while (Difficulty != "1" && Difficulty != "2" && Difficulty != "3")
+            {
+                Console.WriteLine("Invalid Response: Please Choose a Difficulty: ");
+                Difficulty = Console.ReadLine();
+                
+            }
+
             if (Difficulty == "1")
             {
                 Chances = 8;
@@ -22,7 +29,7 @@ namespace BattleShipGame
             {
                 Chances = 12;
             }
-            Console.WriteLine($"You have {Chances} chances!");
+            Console.WriteLine($"\nYou have {Chances} chances!");
         }
     }
 }

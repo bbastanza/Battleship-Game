@@ -10,7 +10,7 @@ namespace BattleShipGame
 
         public void LogGrid()
         {
-            Console.WriteLine($"Grid you will play on is {GridWidth} X {GridHeight}");
+            Console.WriteLine($"Grid you will play on is {GridWidth} X {GridHeight}\n");
         }
 
 
