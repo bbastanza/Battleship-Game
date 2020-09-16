@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b530d61-cd99-4185-9ebd-28e100b13bd3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BattleShipGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BattleShipGame/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BattleShipGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BattleShipGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleShipGame/Difficult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleShipGame/Difficult.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleShipGame/Grid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleShipGame/Grid.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleShipGame/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleShipGame/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleShipGame/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleShipGame/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleShipGame/bin/Debug/netcoreapp3.1/BattleShipGame.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BattleShipGame/bin/Debug/netcoreapp3.1/BattleShipGame.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleShipGame/bin/Debug/netcoreapp3.1/BattleShipGame.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BattleShipGame/bin/Debug/netcoreapp3.1/BattleShipGame.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleShipGame/obj/Debug/netcoreapp3.1/BattleShipGame.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BattleShipGame/obj/Debug/netcoreapp3.1/BattleShipGame.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleShipGame/obj/Debug/netcoreapp3.1/BattleShipGame.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BattleShipGame/obj/Debug/netcoreapp3.1/BattleShipGame.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleShipGame/obj/Debug/netcoreapp3.1/BattleShipGame.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BattleShipGame/obj/Debug/netcoreapp3.1/BattleShipGame.pdb" afterDir="false" />
     </list>
@@ -32,8 +33,9 @@
         <option value="$PROJECT_DIR$/BattleShipGame/Person.cs" />
         <option value="$PROJECT_DIR$/BattleShipGame/Difficulty.cs" />
         <option value="$PROJECT_DIR$/BattleShipGame/Grid.cs" />
-        <option value="$PROJECT_DIR$/BattleShipGame/Difficult.cs" />
         <option value="$PROJECT_DIR$/BattleShipGame/Player.cs" />
+        <option value="$PROJECT_DIR$/BattleShipGame/Difficult.cs" />
+        <option value="$PROJECT_DIR$/BattleShipGame/Ship.cs" />
         <option value="$PROJECT_DIR$/BattleShipGame/Program.cs" />
       </list>
     </option>
@@ -47,6 +49,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -81,7 +84,10 @@
       <workItem from="1600274311064" duration="383000" />
       <workItem from="1600275045386" duration="319000" />
       <workItem from="1600277301065" duration="417000" />
-      <workItem from="1600279280731" duration="1336000" />
+      <workItem from="1600279280731" duration="1729000" />
+      <workItem from="1600287476790" duration="1749000" />
+      <workItem from="1600293220569" duration="1283000" />
+      <workItem from="1600296705317" duration="2901000" />
     </task>
     <servers />
   </component>
@@ -94,29 +100,33 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="743" y="277" width="424" height="483" key="FileChooserDialogImpl" timestamp="1600275346059">
+    <state x="743" y="277" width="424" height="483" key="FileChooserDialogImpl" timestamp="1600294498334">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="743" y="277" width="424" height="483" key="FileChooserDialogImpl/0.0.1920.1080/1.1080.1920.1080@0.0.1920.1080" timestamp="1600275346059" />
-    <state width="1874" height="265" key="GridCell.Tab.0.bottom" timestamp="1600277717374">
+    <state x="743" y="277" width="424" height="483" key="FileChooserDialogImpl/0.0.1920.1080/1.1080.1920.1080@0.0.1920.1080" timestamp="1600294498334" />
+    <state width="1874" height="333" key="GridCell.Tab.0.bottom" timestamp="1600299606674">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="265" key="GridCell.Tab.0.bottom/0.0.1920.1080/1.1080.1920.1080@0.0.1920.1080" timestamp="1600277717374" />
+    <state width="1874" height="333" key="GridCell.Tab.0.bottom/0.0.1920.1080/1.1080.1920.1080@0.0.1920.1080" timestamp="1600299606674" />
     <state width="1874" height="265" key="GridCell.Tab.0.bottom/1.0.1920.1080/0.1080.1920.1080@1.0.1920.1080" timestamp="1600207595912" />
-    <state width="1874" height="265" key="GridCell.Tab.0.center" timestamp="1600277717373">
+    <state width="1874" height="333" key="GridCell.Tab.0.center" timestamp="1600299606673">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="265" key="GridCell.Tab.0.center/0.0.1920.1080/1.1080.1920.1080@0.0.1920.1080" timestamp="1600277717373" />
+    <state width="1874" height="333" key="GridCell.Tab.0.center/0.0.1920.1080/1.1080.1920.1080@0.0.1920.1080" timestamp="1600299606673" />
     <state width="1874" height="265" key="GridCell.Tab.0.center/1.0.1920.1080/0.1080.1920.1080@1.0.1920.1080" timestamp="1600207595911" />
-    <state width="1874" height="265" key="GridCell.Tab.0.left" timestamp="1600277717373">
+    <state width="1874" height="333" key="GridCell.Tab.0.left" timestamp="1600299606673">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="265" key="GridCell.Tab.0.left/0.0.1920.1080/1.1080.1920.1080@0.0.1920.1080" timestamp="1600277717373" />
+    <state width="1874" height="333" key="GridCell.Tab.0.left/0.0.1920.1080/1.1080.1920.1080@0.0.1920.1080" timestamp="1600299606673" />
     <state width="1874" height="265" key="GridCell.Tab.0.left/1.0.1920.1080/0.1080.1920.1080@1.0.1920.1080" timestamp="1600207595911" />
-    <state width="1874" height="265" key="GridCell.Tab.0.right" timestamp="1600277717373">
+    <state width="1874" height="333" key="GridCell.Tab.0.right" timestamp="1600299606673">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="265" key="GridCell.Tab.0.right/0.0.1920.1080/1.1080.1920.1080@0.0.1920.1080" timestamp="1600277717373" />
+    <state width="1874" height="333" key="GridCell.Tab.0.right/0.0.1920.1080/1.1080.1920.1080@0.0.1920.1080" timestamp="1600299606673" />
     <state width="1874" height="265" key="GridCell.Tab.0.right/1.0.1920.1080/0.1080.1920.1080@1.0.1920.1080" timestamp="1600207595911" />
+    <state x="525" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600297296506">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="525" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1080/1.1080.1920.1080@0.0.1920.1080" timestamp="1600297296506" />
   </component>
 </project>

@@ -7,6 +7,7 @@ namespace BattleShipGame
         public string Name;
         public byte Hits = 0;
         public byte GuessesLeft;
+        public bool GameOver = false;
 
 
         public void Welcome()
@@ -19,7 +20,8 @@ namespace BattleShipGame
             Hits++;
             if (Hits == 5)
             {
-                Console.WriteLine("You've sunk the Battleship!!!");
+                GameOver = true;
+                Console.WriteLine($"You've sunk the Battleship {Name}!!!");
             }
             else
             {
@@ -32,6 +34,7 @@ namespace BattleShipGame
             GuessesLeft--;
             if (GuessesLeft == 0)
             {
+                GameOver = true;
                 Console.WriteLine("Miss! You lose and the pirates took over you're ship!");
             }
             else if (GuessesLeft == 1)

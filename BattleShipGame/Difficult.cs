@@ -16,7 +16,6 @@ namespace BattleShipGame
             {
                 Console.WriteLine("Invalid Response: Please Choose a Difficulty: ");
                 Difficulty = Console.ReadLine();
-                
             }
 
             if (Difficulty == "1")
