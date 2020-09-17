@@ -12,6 +12,9 @@ namespace BattleShipGame
 
         public void Welcome()
         {
+            Console.WriteLine("\n\t\tWelcome to Battleship!\n");
+            Console.WriteLine("What is your name?");
+            Name = Console.ReadLine();
             Console.WriteLine($"Let's play some Battleship, {Name}!");
         }
 

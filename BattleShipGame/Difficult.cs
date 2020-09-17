@@ -20,13 +20,13 @@ namespace BattleShipGame
 
             if (Difficulty == "1")
             {
-                Chances = 8;
+                Chances = 6;
             } else if (Difficulty == "2")
             {
-                Chances = 10;
+                Chances = 8;
             }else if (Difficulty == "3")
             {
-                Chances = 12;
+                Chances = 10;
             }
             Console.WriteLine($"\nYou have {Chances} chances!");
         }
