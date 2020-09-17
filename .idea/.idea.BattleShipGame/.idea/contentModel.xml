@@ -6,10 +6,11 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="BattleShipGame" t="IncludeRecursive">
         <e p="BattleShipGame.csproj" t="IncludeRecursive" />
-        <e p="Difficult.cs" t="Include" />
-        <e p="Grid.cs" t="Include" />
+        <e p="Difficulty.cs" t="Include" />
+        <e p="PlayAgain.cs" t="Include" />
         <e p="Player.cs" t="Include" />
         <e p="Program.cs" t="Include" />
+        <e p="Rules.cs" t="Include" />
         <e p="Ship.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">

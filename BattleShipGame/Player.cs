@@ -4,51 +4,52 @@ namespace BattleShipGame
 {
     public class Player
     {
-        public string Name;
-        public byte Hits = 0;
-        public byte GuessesLeft;
+        private string _name;
+        private int _hits = 0;
+        private int _misses = 0;
+        public int GuessesLeft;
         public bool GameOver = false;
-
-
+ 
         public void Welcome()
         {
             Console.WriteLine("\n\t\tWelcome to Battleship!\n");
-            Console.WriteLine("What is your name?");
-            Name = Console.ReadLine();
-            Console.WriteLine($"Let's play some Battleship, {Name}!");
+            Console.Write("What is your name? ");
+            _name = Console.ReadLine();
+            Console.WriteLine($"Let's play some Battleship, {_name}!\n");
         }
 
         public void HitShip()
         {
-            Hits++;
-            if (Hits == 5)
+            _hits++;
+            if (_hits == 5)
             {
                 GameOver = true;
-                Console.WriteLine($"You've sunk the Battleship {Name}!!!");
+                Console.WriteLine($"\nYou've sunk the Battleship, {_name}!!! (｡^‿^｡)");
             }
             else
             {
-                Console.WriteLine($"Direct hit! You have hit the ship {Hits} times!");
+                Console.WriteLine($"\nDirect hit! You have hit the ship {_hits} times!");
             }
         }
-
         public void MissShip()
         {
+            _misses++;
             GuessesLeft--;
-            if (GuessesLeft == 0)
+            switch (GuessesLeft)
             {
-                GameOver = true;
-                Console.WriteLine("Miss! You lose and the pirates took over you're ship!");
-            }
-            else if (GuessesLeft == 1)
-            {
-                Console.WriteLine("Miss! This is your last chance!");
-            }
-            else
-            {
-                Console.WriteLine($"Miss! You have {GuessesLeft} left!");
+                case 0:
+                    GameOver = true;
+                    Console.WriteLine("\nMiss! You lose and the pirates took over you're ship! ╭∩╮(｡^_^｡)");
+                    break;
+                case 1:
+                    Console.WriteLine("\nMiss! This is your last chance!");
+                    break;
+                default:
+                    Console.WriteLine($"\nMiss! You have {GuessesLeft} guesses left!");
+                    break;
             }
         }
+        
 
     }
 }

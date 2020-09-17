@@ -6,37 +6,67 @@ namespace BattleShipGame
 {
     static class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            var player = new Player();
-            var grid = new Grid();
-            var difficulty = new Difficult();
-            var ship = new Ship();
-            
-            ship.CreateShip();
-            var shipPositions = new List<string>(ship.ShipPositions);
-            // Console.WriteLine($"{ship.ShipPositions[0]}, {ship.ShipPositions[1]}, {ship.ShipPositions[2]}, {ship.ShipPositions[3]}, {ship.ShipPositions[4]}");
-            
-            player.Welcome();
-            
-            grid.LogGrid();
-            difficulty.ChooseDifficulty();
-            player.GuessesLeft = difficulty.Chances;
-            
-            while (player.GameOver == false)
+
+            var gameGoing = true;
+            while (gameGoing)
             {
-                Console.WriteLine("Where would you like to move?");
-                var positionChoice = Console.ReadLine();
+                var player = new Player();
+                var difficulty = new Difficulty();
+                var ship = new Ship();
+                var possibleCoordinates = ship.PossibleCoordinates;
+                var hitCoordinates = new List<string>();
+                var missCoordinates = new List<string>();
+                ship.CreateShip();
+                var shipPositions = new List<string>(ship.ShipPositions);
+                
             
-                if (shipPositions.Contains(positionChoice))
+                player.Welcome();
+                
+                Rules.DisplayRules();
+            
+                player.GuessesLeft = difficulty.ChooseDifficulty();
+                
+                while (!player.GameOver)
                 {
-                    player.HitShip();
-                    shipPositions.Remove(positionChoice);
+                    Console.Write("\nHits: ");
+                    foreach (var guess in hitCoordinates)
+                    {
+                        Console.Write($"{guess} ");
+                    }
+                    Console.Write("\nMisses: ");
+                    foreach (var guess in missCoordinates)
+                    {
+                        Console.Write($"{guess} ");
+                    }
+                    
+                    Console.WriteLine("\nWhere would you like to move? ");
+                    var positionChoice = Console.ReadLine()?.ToLower();
+                    foreach(var guess in missCoordinates){}
+                    
+                    if (!possibleCoordinates.Contains(positionChoice))
+                    {
+                        Console.WriteLine("\nInvalid Guess...");
+                    }
+                    else if (hitCoordinates.Contains(positionChoice) || missCoordinates.Contains(positionChoice))
+                    {
+                        Console.WriteLine("\nYou already guessed that...");
+                    }
+                    else if (shipPositions.Contains(positionChoice))
+                    {
+                        player.HitShip();
+                        shipPositions.Remove(positionChoice);
+                        hitCoordinates.Add(positionChoice);
+                    }
+                    else
+                    {
+                        player.MissShip();
+                        missCoordinates.Add(positionChoice);
+                    }
                 }
-                else
-                {
-                    player.MissShip();
-                }
+                ship.ShowShipCoordinates();
+                gameGoing = PlayAgain.Restart();
             }
         }
     }
