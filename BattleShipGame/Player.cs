@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace BattleShipGame
 {
@@ -45,6 +46,19 @@ namespace BattleShipGame
                 default:
                     Console.WriteLine($"\nMiss! You have {GuessesLeft} guesses left!");
                     break;
+            }
+        }
+        public static void DisplayGuesses(List<string> hits, List<string> misses)
+        {
+            Console.Write("\nHits: ");
+            foreach (var guess in hits)
+            {
+                Console.Write($"{guess} ");
+            }
+            Console.Write("\nMisses: ");
+            foreach (var guess in misses)
+            {
+                Console.Write($"{guess} ");
             }
         }
     }

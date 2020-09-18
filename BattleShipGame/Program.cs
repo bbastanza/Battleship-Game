@@ -8,20 +8,6 @@ namespace BattleShipGame
     {
         static void Main()
         {
-            static void DisplayGuesses(List<string> hits, List<string> misses)
-            {
-                Console.Write("\nHits: ");
-                foreach (var guess in hits)
-                {
-                    Console.Write($"{guess} ");
-                }
-                Console.Write("\nMisses: ");
-                foreach (var guess in misses)
-                {
-                    Console.Write($"{guess} ");
-                }
-            }
-
             
             var gameGoing = true;
             while (gameGoing)
@@ -44,7 +30,7 @@ namespace BattleShipGame
                 
                 while (!player.GameOver)
                 {
-                    DisplayGuesses(hitCoordinates, missCoordinates);
+                    Player.DisplayGuesses(hitCoordinates, missCoordinates);
                     
                     Console.WriteLine("\nWhere would you like to move? ");
                     var positionChoice = Console.ReadLine()?.ToLower();
