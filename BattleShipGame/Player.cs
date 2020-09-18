@@ -6,7 +6,6 @@ namespace BattleShipGame
     {
         private string _name;
         private int _hits = 0;
-        private int _misses = 0;
         public int GuessesLeft;
         public bool GameOver = false;
  
@@ -33,7 +32,6 @@ namespace BattleShipGame
         }
         public void MissShip()
         {
-            _misses++;
             GuessesLeft--;
             switch (GuessesLeft)
             {
@@ -49,7 +47,5 @@ namespace BattleShipGame
                     break;
             }
         }
-        
-
     }
 }
