@@ -8,7 +8,6 @@ namespace BattleShipGame
     {
         static void Main()
         {
-            
             var gameGoing = true;
             while (gameGoing)
             {

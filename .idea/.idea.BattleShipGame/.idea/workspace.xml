@@ -23,7 +23,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b530d61-cd99-4185-9ebd-28e100b13bd3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/BattleShipGame/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleShipGame/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleShipGame/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BattleShipGame/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,8 +47,8 @@
         <option value="$PROJECT_DIR$/BattleShipGame/PlayAgain.cs" />
         <option value="$PROJECT_DIR$/BattleShipGame/Rules.cs" />
         <option value="$PROJECT_DIR$/BattleShipGame/Ship.cs" />
-        <option value="$PROJECT_DIR$/BattleShipGame/Program.cs" />
         <option value="$PROJECT_DIR$/BattleShipGame/Player.cs" />
+        <option value="$PROJECT_DIR$/BattleShipGame/Program.cs" />
       </list>
     </option>
   </component>
@@ -109,6 +108,7 @@
       <workItem from="1600383011950" duration="3879000" />
       <workItem from="1600466651407" duration="1044000" />
       <workItem from="1600467910740" duration="1409000" />
+      <workItem from="1600472643363" duration="356000" />
     </task>
     <servers />
   </component>
