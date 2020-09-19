@@ -34,7 +34,8 @@ namespace BattleShipGame
                     Console.WriteLine("\nWhere would you like to move? ");
                     var positionChoice = Console.ReadLine()?.ToLower();
 
-                    if (positionChoice != null && (!ship.PossibleYCoordinates.Contains(positionChoice[0])
+                    if (positionChoice != null && (positionChoice == ""
+                                                   ||!ship.PossibleYCoordinates.Contains(positionChoice[0])
                                                    || !ship.PossibleXCoordinates.Contains(positionChoice[1])
                                                    || positionChoice.Length > 2
                                                    || positionChoice.Length < 1))

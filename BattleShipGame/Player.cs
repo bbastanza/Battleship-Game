@@ -5,7 +5,7 @@ namespace BattleShipGame
 {
     public class Player
     {
-        private string _name;
+        private string _name = "";
         private int _hits = 0;
         public int GuessesLeft;
         public bool GameOver = false;
@@ -14,7 +14,10 @@ namespace BattleShipGame
         {
             Console.WriteLine("\n\t\tWelcome to Battleship!\n");
             Console.Write("What is your name? ");
-            _name = Console.ReadLine();
+            while (_name == "")
+            {
+                _name = Console.ReadLine();
+            }
             Console.WriteLine($"Let's play some Battleship, {_name}!\n");
         }
 
