@@ -34,11 +34,11 @@ namespace BattleShipGame
                     Console.WriteLine("\nWhere would you like to move? ");
                     var positionChoice = Console.ReadLine()?.ToLower();
 
-                    if (positionChoice != null && (positionChoice == ""
-                                                   ||!ship.PossibleYCoordinates.Contains(positionChoice[0])
-                                                   || !ship.PossibleXCoordinates.Contains(positionChoice[1])
-                                                   || positionChoice.Length > 2
-                                                   || positionChoice.Length < 1))
+                    if (String.IsNullOrWhiteSpace(positionChoice)
+                            || !ship.PossibleYCoordinates.Contains(positionChoice[0])
+                            || !ship.PossibleXCoordinates.Contains(positionChoice[1])
+                            || positionChoice.Length > 2
+                            || positionChoice.Length < 1)
                         Console.WriteLine("\nInvalid Guess...");
                     
                     else if (hitCoordinates.Contains(positionChoice) || missCoordinates.Contains(positionChoice))
