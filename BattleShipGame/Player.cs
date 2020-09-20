@@ -16,7 +16,7 @@ namespace BattleShipGame
             Console.Write("What is your name? ");
             while (_name == "")
             {
-                _name = Console.ReadLine();
+                _name = Console.ReadLine()?.Trim();
             }
             Console.WriteLine($"Let's play some Battleship, {_name}!\n");
         }

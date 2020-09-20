@@ -32,7 +32,7 @@ namespace BattleShipGame
                     Player.DisplayGuesses(hitCoordinates, missCoordinates);
                     
                     Console.WriteLine("\nWhere would you like to move? ");
-                    var positionChoice = Console.ReadLine()?.ToLower();
+                    var positionChoice = Console.ReadLine()?.ToLower().Trim();
 
                     if (String.IsNullOrWhiteSpace(positionChoice)
                             || !ship.PossibleYCoordinates.Contains(positionChoice[0])

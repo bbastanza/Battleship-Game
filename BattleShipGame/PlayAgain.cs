@@ -9,7 +9,7 @@ namespace BattleShipGame
             Console.WriteLine("Play Again? (Y or N)");
             var playAgain = "";
             while (playAgain != "y" && playAgain != "n")
-                playAgain = Console.ReadLine()?.ToLower();
+                playAgain = Console.ReadLine()?.ToLower().Trim();
             return playAgain != "n";
         }
     }
