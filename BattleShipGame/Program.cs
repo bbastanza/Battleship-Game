@@ -11,49 +11,34 @@ namespace BattleShipGame
             var gameGoing = true;
             while (gameGoing)
             {
-                var player = new Player();
+                var game = new Game();
                 var difficulty = new Difficulty();
                 var ship = new Ship();
                 
-                var hitCoordinates = new List<string>();
-                var missCoordinates = new List<string>();
+                game.Welcome();
                 
-                ship.CreateShip();
-                var shipPositions = new List<string>(ship.ShipPositions);
-                
-                player.Welcome();
-                
-                Rules.DisplayRules();
+                game.DisplayRules();
             
-                player.GuessesLeft = difficulty.ChooseDifficulty();
-                
-                while (!player.GameOver)
-                {
-                    Player.DisplayGuesses(hitCoordinates, missCoordinates);
-                    
-                    Console.WriteLine("\nWhere would you like to move? ");
-                    var positionChoice = Console.ReadLine()?.ToLower().Trim();
+                game.GuessesLeft = difficulty.ChooseDifficulty();
 
-                    if (String.IsNullOrWhiteSpace(positionChoice)
-                            || !ship.PossibleYCoordinates.Contains(positionChoice[0])
-                            || !ship.PossibleXCoordinates.Contains(positionChoice[1])
-                            || positionChoice.Length > 2
-                            || positionChoice.Length < 1)
-                        Console.WriteLine("\nInvalid Guess...");
+                while (!game.GameOver)
+                {
+                    game.DisplayGuesses();
                     
-                    else if (hitCoordinates.Contains(positionChoice) || missCoordinates.Contains(positionChoice))
+                    var positionChoice = game.AskForPosition();
+
+                    if (ship.isValidCoordinates(positionChoice))
+                        Console.WriteLine("\nInvalid Coordinates...");
+                    
+                    else if (game.IsPreviousGuess(positionChoice))
                         Console.WriteLine("\nYou already guessed that...");
                     
-                    else if (shipPositions.Contains(positionChoice))
-                    {
-                        player.HitShip();
-                        hitCoordinates.Add(positionChoice);
-                    }
+                    else if (ship.IsHit(positionChoice))
+                        game.HitShip(positionChoice);
+                    
                     else
-                    {
-                        player.MissShip();
-                        missCoordinates.Add(positionChoice);
-                    }
+                        game.MissShip(positionChoice);
+                    
                 }
                 ship.ShowShipCoordinates();
                 gameGoing = PlayAgain.Restart();
